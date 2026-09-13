@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mohammad Ricko Aprilianto</title>
+    <!-- Jika Anda pakai template Vanilla Vite biasa, panggil file CSS/JS utama Anda. Contoh: -->
+    <link href="/src/style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+    <style>
+        body { background-color: #0b0f19; color: #e2e8f0; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b0f19; }
+        ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 4px; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 top-0 bg-darkBg/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center relative">
+            
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-white">Ric<span class="text-secondary">ko</span></a>
+            
+            <!-- Desktop Menu (Hidden on mobile) -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-primary transition text-gray-200">Home</a>
+                <a href="#about" class="hover:text-primary transition text-gray-200">Who I Am</a>
+                <a href="#portfolio" class="hover:text-primary transition text-gray-200">Portfolio</a>
+                <a href="#certification" class="hover:text-primary transition text-gray-200">Certification</a>
+                <a href="#contact" class="hover:text-primary transition text-gray-200">Contact</a>
+            </div>
+            
+            <!-- Desktop Resume Button (Hidden on mobile) -->
+            <a href="CV_Mohammad_Ricko_Aprilianto.pdf" download="CV_Mohammad_Ricko_Aprilianto.pdf" class="hidden md:block bg-primary hover:bg-purple-700 text-white px-5 py-2 rounded-lg font-medium transition">
+                <i class="fa-solid fa-download mr-2"></i>
+                Resume
+            </a>
+
+            <!-- Hamburger Button (Visible ONLY on mobile) -->
+            <button id="hamburger-btn" class="block md:hidden text-gray-200 hover:text-white focus:outline-none transition">
+                <!-- Ikon Hamburger (FontAwesome) -->
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-darkBg/95 backdrop-blur-md border-b border-gray-800 shadow-xl transition-all duration-300">
+            <div class="flex flex-col px-6 py-6 space-y-4 text-center">
+                <a href="#home" class="text-gray-200 hover:text-primary transition text-lg font-medium">Home</a>
+                <a href="#about" class="text-gray-200 hover:text-primary transition text-lg font-medium">Who I Am</a>
+                <a href="#portfolio" class="text-gray-200 hover:text-primary transition text-lg font-medium">Portfolio</a>
+                <a href="#certification" class="text-gray-200 hover:text-primary transition text-lg font-medium">Certification</a>
+                <a href="#contact" class="text-gray-200 hover:text-primary transition text-lg font-medium">Contact</a>
+                
+                <!-- Mobile Resume Button -->
+                <a href="CV_Mohammad_Ricko_Aprilianto.pdf" download="CV_Mohammad_Ricko_Aprilianto.pdf" class="mt-4 bg-primary hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-medium transition inline-block">
+                    <i class="fa-solid fa-download mr-2"></i>
+                    Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-32 pb-20 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 min-h-screen">
+        <div class="md:w-3/5 space-y-6 text-center md:text-left">
+            <h2 class="text-lg text-gray-400 font-medium tracking-wider">Available for work</h2>
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                Hi! I'm <br>
+                <span class="text-white">Mohammad </span>
+                <span class="text-secondary">Ricko</span>
+                <span class="text-white">Aprilianto</span>
+            </h1>
+            <p class="text-xl font-semibold text-gray-300">A Software Developer and Digital Marketer</p>
+            <p class="text-gray-400 text-base leading-relaxed max-w-xl">
+                A Digital Business student with a passion for Web and Mobile Development, especially backend, and a growing interest in Digital Marketing.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                <a href="#portfolio" class="bg-secondary hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-eye"></i> View My Work
+                </a>
+                <a href="#contact" class="border border-gray-600 hover:border-gray-400 text-white px-8 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-envelope"></i> Contact Me
+                </a>
+            </div>
+        </div>
+        <div class="md:w-2/5 flex justify-center">
+            <!-- Ganti src di bawah dengan link foto profil Anda -->
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-gray-700 overflow-hidden shadow-[0_0_40px_rgba(124,58,237,0.3)]">
+                <img src="photo.jpeg" alt="Profile" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & SKILLS SECTION -->
+    <section id="about" class="py-20 px-6 lg:px-12 max-w-7xl mx-auto border-t border-gray-800">
+        <div class="grid lg:grid-cols-2 gap-12">
+            
+            <!-- Bagian Kiri (About Me Text & Button) -->
+            <div class="space-y-6 flex flex-col justify-center">
+                <div class="mb-2">
+                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">&lt;/&gt; Who I Am?</h2>
+                </div>
+                <p class="text-gray-400 leading-relaxed text-justify">
+                    I'm a Digital Business student and a passionate tech enthusiast specializing in Web and Mobile Development, with a strong focus on Backend Development.
+                </p>
+                <p class="text-gray-400 leading-relaxed text-justify">
+                    Beyond writing code, I actively explore Digital Marketing strategies to create impactful and holistic digital solutions. I thrive in collaborative environments, value teamwork, and am committed to continuous learning. 
+                </p>
+                <p class="text-gray-400 leading-relaxed text-justify">
+                    By constantly improving both my technical and soft skills, I aim to deliver innovative results and adapt to the evolving digital landscape.
+                </p>
+                
+                <div class="pt-4">
+                      <a href="CV_Mohammad_Ricko_Aprilianto.pdf" download="CV_Mohammad_Ricko_Aprilianto.pdf" class="inline-flex bg-primary hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-medium transition items-center gap-2 shadow-lg shadow-primary/20">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bagian Kanan (Skills & Technologies) -->
+            <div class="flex flex-col justify-center bg-darkCard/30 p-2 md:p-6 rounded-2xl">
+                <!-- Skill Pills (Berdasarkan request Anda) -->
+                <div class="mb-10">
+                    <h3 class="text-primary font-medium text-lg mb-5">Skills & Technologies</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">PHP</span>
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">Laravel</span>
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">MySQL</span>
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">JavaScript</span>
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">Tailwind CSS</span>
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">Bootstrap</span>
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">Figma</span>
+                        <span class="px-5 py-2 bg-[#131b2f] border border-gray-700/50 rounded-full text-sm text-gray-300 hover:border-primary/50 transition cursor-default shadow-sm">Kotlin</span>
+                    </div>
+                </div>
+
+                <!-- Domain Cards (Menyamping) -->
+                <div class="space-y-4">
+                    <!-- Web Dev -->
+                    <div class="flex items-center gap-5 p-5 bg-[#0b0f19]/80 border border-gray-800 rounded-xl hover:border-gray-600 transition">
+                        <div class="w-12 h-12 shrink-0 rounded-lg bg-[#131b2f] flex items-center justify-center text-primary border border-gray-800">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold text-[15px]">Web Development</h4>
+                            <p class="text-sm text-gray-500 mt-1">Building responsive and performant web applications</p>
+                        </div>
+                    </div>
+                    <!-- Mobile Apps -->
+                    <div class="flex items-center gap-5 p-5 bg-[#0b0f19]/80 border border-gray-800 rounded-xl hover:border-gray-600 transition">
+                      <div class="w-12 h-12 shrink-0 rounded-lg bg-[#131b2f] flex items-center justify-center text-primary border border-gray-800">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-white font-semibold text-[15px]">Mobile Apps</h4>
+                        <p class="text-sm text-gray-500 mt-1">Developing cross-platform mobile applications</p>
+                      </div>
+                    </div>
+                    <!-- UI/UX -->
+                    <div class="flex items-center gap-5 p-5 bg-[#0b0f19]/80 border border-gray-800 rounded-xl hover:border-gray-600 transition">
+                        <div class="w-12 h-12 shrink-0 rounded-lg bg-[#131b2f] flex items-center justify-center text-primary border border-gray-800">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold text-[15px]">Digital Marketing</h4>
+                            <p class="text-sm text-gray-500 mt-1">Developing and executing digital marketing strategies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / CANVA EMBED SECTION -->
+    <section id="portfolio" class="py-20 px-6 lg:px-12 bg-darkCard/50 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">&lt;&lt; Portfolio & Experience</h2>
+                <h3 class="text-3xl font-bold text-white">My Journey & Achievements</h3>
+            </div>
+
+            <!-- Tempat Embed Canva -->
+            <div class="w-full bg-darkBg rounded-2xl border border-gray-700 p-2 md:p-4 shadow-2xl relative overflow-hidden">
+                <!-- 
+                  TUTORIAL CARA MENGISI CANVA:
+                  1. Buka Canva Anda, klik 'Share' (Bagikan) -> Pilih 'Embed' (Sematkan)
+                  2. Copy kode 'HTML Embed Code' 
+                  3. Ganti div di bawah ini dengan kode dari Canva Anda.
+                -->
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                 border-radius: 8px; will-change: transform;">
+                  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                    src="https://www.canva.com/design/DAF_YOUR_LINK_HERE/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                  </iframe>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="text-sm text-gray-400">Plese interact with the slides above to see my work experience and achievements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATION SECTION -->
+    <section id="certification" class="py-20 px-6 lg:px-12 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col items-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Certification</h2>
+                <div class="w-16 h-1 bg-secondary rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-white p-2 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:-translate-y-2 transition duration-300">
+                    <img src="https://via.placeholder.com/400x300?text=Sertifikat+Bangkit+1" alt="Bangkit Certificate 1" class="w-full rounded-lg">
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-gray-900 text-sm">Bangkit Certificate</h4>
+                        <p class="text-xs text-gray-500">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</p>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="bg-white p-2 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:-translate-y-2 transition duration-300">
+                    <img src="https://via.placeholder.com/400x300?text=Sertifikat+Bangkit+2" alt="Bangkit Certificate 2" class="w-full rounded-lg">
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-gray-900 text-sm">Bangkit Certificate</h4>
+                        <p class="text-xs text-gray-500">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</p>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="bg-white p-2 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:-translate-y-2 transition duration-300">
+                    <img src="https://via.placeholder.com/400x300?text=Sertifikat+Bangkit+3" alt="Bangkit Certificate 3" class="w-full rounded-lg">
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-gray-900 text-sm">Bangkit Certificate</h4>
+                        <p class="text-xs text-gray-500">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 px-6 lg:px-12 max-w-7xl mx-auto border-t border-gray-800">
+        <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-10">&lt;&lt; Contact Me</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Info -->
+            <div>
+                <h3 class="text-3xl font-bold text-white mb-4">Get In Touch</h3>
+                <p class="text-gray-400 mb-8">
+                    I'm currently looking for new opportunities. Whether you have a question, a project proposal, or just want to say hi, feel free to reach out!
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-darkCard rounded-full flex items-center justify-center text-primary border border-gray-800">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Email</p>
+                            <p class="text-white font-medium">ricko.aprilianto@email.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-darkCard rounded-full flex items-center justify-center text-primary border border-gray-800">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Phone</p>
+                            <p class="text-white font-medium">+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-darkCard rounded-full flex items-center justify-center text-primary border border-gray-800">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Location</p>
+                            <p class="text-white font-medium">Banjarmasin, South Kalimantan, Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Socials -->
+                <div class="flex gap-4 mt-8">
+                    <a href="#" class="w-10 h-10 bg-darkCard border border-gray-800 rounded flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-darkCard border border-gray-800 rounded flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-darkCard border border-gray-800 rounded flex items-center justify-center text-gray-400 hover:text-white hover:border-primary transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-darkCard p-8 rounded-2xl border border-gray-800">
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Name</label>
+                            <input type="text" class="w-full bg-[#0b0f19] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Email</label>
+                            <input type="email" class="w-full bg-[#0b0f19] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Subject</label>
+                        <input type="text" class="w-full bg-[#0b0f19] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition" placeholder="How can I help you?">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Message</label>
+                        <textarea rows="4" class="w-full bg-[#0b0f19] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-purple-700 text-white font-medium py-3 rounded-lg transition flex justify-center items-center gap-2">
+                        <i class="fa-regular fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 bg-darkBg py-6 mt-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+            <p>&copy; 2026 Mohammad Ricko Aprilianto. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-primary transition">Privacy Policy</a>
+                <a href="#" class="hover:text-primary transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const icon = hamburgerBtn.querySelector('i');
+
+      hamburgerBtn.addEventListener('click', () => {
+          // Toggle class 'hidden' untuk memunculkan/menyembunyikan menu
+          mobileMenu.classList.toggle('hidden');
+
+          // Opsional: Mengubah ikon hamburger (fa-bars) menjadi ikon close (fa-xmark) saat menu terbuka
+          if (mobileMenu.classList.contains('hidden')) {
+              icon.classList.remove('fa-xmark');
+              icon.classList.add('fa-bars');
+          } else {
+              icon.classList.remove('fa-bars');
+              icon.classList.add('fa-xmark');
+          }
+      });
+
+      // Opsional: Tutup menu mobile ketika salah satu link di-klik
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+              icon.classList.remove('fa-xmark');
+              icon.classList.add('fa-bars');
+          });
+      });
+    </script>
+</body>
+</html>
